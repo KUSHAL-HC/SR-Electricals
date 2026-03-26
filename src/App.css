@@ -182,3 +182,14 @@
     border-right-color: var(--border);
   }
 }
+
+
+.my-card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.my-card-hover:hover {
+  transform: translateY(-5px); /* Lifts the card up */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* Adds a deep shadow */
+  cursor: pointer;
+}
