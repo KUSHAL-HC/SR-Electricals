@@ -189,7 +189,7 @@
 }
 
 .my-card-hover:hover {
-  transform: translateY(-5px); /* Lifts the card up */
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* Adds a deep shadow */
+  transform: translateY(-10px); /* Lifts the card up */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Adds a deep shadow */
   cursor: pointer;
 }
