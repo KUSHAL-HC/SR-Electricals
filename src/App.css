@@ -193,3 +193,20 @@
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Adds a deep shadow */
   cursor: pointer;
 }
+.hero-image
+{
+  position: relative;
+}
+
+
+.hero-title {
+  position:absolute;
+  top:40%;
+  left:20%;
+  color:white !important;
+  border-left:4px solid yellow;
+  padding-left:10px;
+  margin:0;
+}.hero-title h1{
+  margin-top:10px;
+}
