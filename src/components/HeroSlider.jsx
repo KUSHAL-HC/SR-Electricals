@@ -4,6 +4,7 @@ import '../App.css'
 
 const HeroSlider = () => {
 
+
   return (
     <div>
          <div id="heroCarousel" className="carousel slide" data-bs-ride="carousel">
@@ -12,6 +13,7 @@ const HeroSlider = () => {
                           <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
                           <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
                     </div>
+        
                     <div className="carousel-inner">
         
                       <div className="carousel-item active hero-image">

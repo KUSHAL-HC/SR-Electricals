@@ -29,7 +29,7 @@ const Home = () => {
       </div>
 
       <div className="container text-center mt-5">
-        <h2 className="mb-4">General Transformer Services</h2>
+        <h2 className="mb-4 text-dark" style={{color:"black"}}>General Transformer Services</h2>
 
         <div className="row text-start">
           <div className="col-md-4">

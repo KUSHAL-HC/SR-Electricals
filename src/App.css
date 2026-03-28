@@ -210,3 +210,10 @@
 }.hero-title h1{
   margin-top:10px;
 }
+
+.nav-hover{
+  border-bottom:2px solid transparent;
+}.nav-hover:hover
+{
+  border-bottom:2px solid red;
+}
