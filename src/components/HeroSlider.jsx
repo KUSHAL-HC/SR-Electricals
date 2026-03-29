@@ -6,7 +6,7 @@ const HeroSlider = () => {
 
 
   return (
-    <div>
+    <div >
          <div id="heroCarousel" className="carousel slide" data-bs-ride="carousel">
                     <div className="carousel-indicators">
                           <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" className="active"></button>
@@ -19,8 +19,8 @@ const HeroSlider = () => {
                       <div className="carousel-item active hero-image">
                           <img src={heroImage} className="d-block w-100" alt="slide1"  style={{ height: "600px", objectFit: "cover", filter: "brightness(50%)", }}/>
                           <div className="hero-title">
-                              <h1>Spares & Services</h1>
-                              <p>Your trusted partner for maintenance</p>
+                              <h1 className='text-light' style={{textAlign:"left"}}>Spares & Services</h1>
+                              <p style={{textAlign:"left",fontSize:"30px"}}>Your trusted partner for maintenance</p>
                           </div>
                       </div>
         

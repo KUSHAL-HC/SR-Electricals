@@ -19,7 +19,7 @@ const Home = () => {
       
       <HeroSlider/>
 
-      <div className="container bg-danger text-white text-center p-5 shadow position-relative z-100" style={{ marginTop: "-50px" }}>
+      <div className="container bg-danger text-white text-center p-5 shadow position-relative z-100" style={{ marginTop: "-50px",rowGap:"10px" }}>
         <h2>Experts In Transformer And Switchgear Maintenance</h2>
         <p>
           UPTSS, the dedicated service arm of Universal Power Transformer Pvt. Ltd.,
