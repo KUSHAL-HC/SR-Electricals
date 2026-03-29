@@ -7,7 +7,7 @@ import target from "../assets/target.png";
 const About = () => {
   return (
     <div className="m-0 text-white fw-bold" style={{ fontFamily: "Arial, Helvetica, sans-serif" }}>
-      <div style={{position: "fixed",top:100,left:0,width: "100%",height:"100%",background: `url(${heroImage}) center/cover no-repeat`,zIndex:0,}}/>
+      <div style={{position: "fixed",top:0,left:0,width: "100%",height:"100%",background: `url(${heroImage}) center/cover no-repeat`,zIndex:0,}}/>
         <section className="hero-section">
             <div className="hero-div position-relative bg-center bg-cover text-white" style={{background: `url(${heroImage}) center/cover no-repeat`,height: "590px",}}>
                 <div className="position-absolute top-50 border-start border-5 border-warning" style={{ left: "15%" }}>
