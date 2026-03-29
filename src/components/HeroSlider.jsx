@@ -17,26 +17,26 @@ const HeroSlider = () => {
                     <div className="carousel-inner">
         
                       <div className="carousel-item active hero-image">
-                          <img src={heroImage} className="d-block w-100" alt="slide1"  style={{ height: "600px", objectFit: "cover", filter: "brightness(50%)", }}/>
+                          <img src={heroImage} className="d-block w-100" alt="slide1"  style={{ height: "600px", objectFit: "cover", filter: "brightness(50%)" }}/>
                           <div className="hero-title">
-                              <h1 className='text-light' style={{textAlign:"left"}}>Spares & Services</h1>
+                              <h1 className='text-light' style={{textAlign:"left",margin:"0"}}>Spares & Services</h1>
                               <p style={{textAlign:"left",fontSize:"30px"}}>Your trusted partner for maintenance</p>
                           </div>
                       </div>
         
-                      <div className="carousel-item">
+                      <div className="carousel-item active hero-image">
                           <img src={heroImage} className="d-block w-100" alt="slide2" style={{ height: "600px", objectFit: "cover", filter: "brightness(50%)" }}/>
                           <div className="hero-title">
-                              <h1>Spares & Services</h1>
-                              <p>Your trusted partner for maintenance</p>
+                              <h1 className='text-light' style={{textAlign:"left",margin:"0"}}>Spares & Services</h1>
+                              <p style={{textAlign:"left",fontSize:"30px"}}>Your trusted partner for maintenance</p>
                           </div>
                       </div>
         
-                      <div className="carousel-item">
+                      <div className="carousel-item active hero-image">
                           <img src={heroImage} className="d-block w-100" alt="slide3" style={{ height: "600px", objectFit: "cover", filter: "brightness(50%)" }}/>
                           <div className="hero-title">
-                              <h1>Spares & Services</h1>
-                              <p>Your trusted partner for maintenance</p>
+                              <h1 className='text-light' style={{textAlign:"left",margin:"0"}}>Spares & Services</h1>
+                              <p style={{textAlign:"left",fontSize:"30px"}}>Your trusted partner for maintenance</p>
                           </div>
                       </div>
                       </div>

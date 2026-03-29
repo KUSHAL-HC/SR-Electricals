@@ -7,7 +7,7 @@ import target from "../assets/target.png";
 const About = () => {
   return (
     <div className="m-0 text-white fw-bold" style={{ fontFamily: "Arial, Helvetica, sans-serif" }}>
-      <div style={{position: "fixed",top:100,left: 0,width: "100%",height:"100%",background: `url(${heroImage}) center/cover no-repeat`,zIndex:0,}}/>
+      <div style={{position: "fixed",top:100,left:0,width: "100%",height:"100%",background: `url(${heroImage}) center/cover no-repeat`,zIndex:0,}}/>
         <section className="hero-section">
             <div className="hero-div position-relative bg-center bg-cover text-white" style={{background: `url(${heroImage}) center/cover no-repeat`,height: "590px",}}>
                 <div className="position-absolute top-50 border-start border-5 border-warning" style={{ left: "15%" }}>
@@ -48,17 +48,17 @@ const About = () => {
           </p>
         </div>
 
-        <div className="d-flex" style={{ columnGap: "10%" }}>
-        <div className="d-flex flex-column"  style={{backgroundColor: "rgba(0,0,0,0.469)", width:"400px",padding: "20px",alignItems: "flex-start",textAlign: "left"}}>
-                <img src={vision} alt="mission" style={{ width: "69px", height: "50px" }}/>
-                <h1 className="text-light">Vision</h1>
-                <p>To provide constant reliable power efficiently and economically</p>
-          </div>
-          <div className="d-flex flex-column"  style={{backgroundColor: "rgba(0,0,0,0.469)", width: "400px",padding: "20px",alignItems: "flex-start",textAlign: "left"}}>
-                <img src={target} alt="mission" style={{ width: "69px", height: "50px" }}/>
-                <h1 className="text-light">Target</h1>
-                <p>To provide constant reliable power efficiently and economically</p>
-          </div>
+        <div className="d-flex" style={{ columnGap: "10%",paddingBottom:"50px"}}>
+            <div className="d-flex flex-column"  style={{backgroundColor: "rgba(0,0,0,0.469)", width:"400px",padding: "20px",alignItems: "flex-start",textAlign: "left"}}>
+                  <img src={vision} alt="mission" style={{ width: "69px", height: "50px" }}/>
+                  <h1 className="text-light">Vision</h1>
+                  <p>To provide constant reliable power efficiently and economically</p>
+            </div>
+            <div className="d-flex flex-column"  style={{backgroundColor: "rgba(0,0,0,0.469)", width: "400px",padding: "20px",alignItems: "flex-start",textAlign: "left"}}>
+                  <img src={target} alt="mission" style={{ width: "69px", height: "50px" }}/>
+                  <h1 className="text-light">Target</h1>
+                  <p>To provide constant reliable power efficiently and economically</p>
+            </div>
         </div>
       </section>
     </div>
