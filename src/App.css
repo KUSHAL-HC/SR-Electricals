@@ -218,3 +218,10 @@
   border-bottom:2px solid red;
 }
 
+.AMC-hero-div::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+

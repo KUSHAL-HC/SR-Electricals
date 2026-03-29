@@ -1,7 +1,5 @@
 import React from 'react';
-import heroImage from "../assets/hero-image.png";
 import engineer from  "../assets/engineer.png";
-import  conclusion from "../assets/conclusion.png";
 import '../App.css'
 import HeroSlider from './HeroSlider';
 
