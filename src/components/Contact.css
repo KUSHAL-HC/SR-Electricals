@@ -1,0 +1,66 @@
+:root {
+    --primary-blue: #2b5a9e;
+    --dark-blue: #1a3a63;
+    --light-blue: #eef4ff;
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    color: #333;
+  }
+  
+  .hero {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  }
+  
+  .badge {
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    background: rgba(255,255,255,0.2);
+    padding: 4px 8px;
+    border-radius: 2px;
+  }
+  
+  .hero p {
+    max-width: 500px;
+    line-height: 1.6;
+  }
+  
+  .contact-section {
+    margin-top: -60px;
+  }
+  
+  .nav-links .active {
+    color: var(--primary-blue);
+    border-bottom: 2px solid var(--primary-blue);
+  }
+  
+  .map-placeholder {
+    height: 200px;
+    background: #ccc;
+    border-radius: 8px;
+  }
+  
+  .availability-card {
+    background: var(--light-blue);
+    color: var(--dark-blue);
+    font-size: 0.85rem;
+  }
+  
+  .consultation {
+    background-color: var(--light-blue);
+  }
+  
+  .consult-text {
+    max-width: 50%;
+  }
+  
+  .footer {
+    font-size: 0.7rem;
+    color: #999;
+  }
+  
+  .footer-links a {
+    color: #999;
+  }
