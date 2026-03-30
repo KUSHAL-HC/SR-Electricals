@@ -1,9 +1,19 @@
 import React from 'react';
+import  {Link, Navigate}  from 'react-router-dom';
 import engineer from  "../assets/engineer.png";
 import '../App.css'
 import HeroSlider from './HeroSlider';
 
 const Home = () => {
+
+  let downloadBroucher=()=>{
+      const link = document.createElement("a");
+      link.href = "/brochure.pdf";
+      link.download = "Company-broucher.pdf";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+  }
   return (
     <div className="bg-warning-subtle">
       <div className="d-flex justify-content-end bg-light">
@@ -11,7 +21,9 @@ const Home = () => {
           Contact us : 8431420127 || 8971023116
         </div>
         <div className="bg-danger text-white px-3 py-2">
-          Book A Site Visit
+          <Link to="/Contact" style={{color:"white",textUnderlineOffset:"none"}}>
+              Book A Site Visit
+          </Link>
         </div>
       </div>
       
@@ -23,7 +35,7 @@ const Home = () => {
           UPTSS, the dedicated service arm of Universal Power Transformer Pvt. Ltd.,
           is committed to providing exceptional maintenance solutions.
         </p>
-        <button className="btn btn-light">Download Brochure</button>
+        <button className="btn btn-light" onClick={downloadBroucher}>Download Brochure</button>
       </div>
 
       <div className="container text-center mt-5">
@@ -70,7 +82,51 @@ const Home = () => {
           </div>
         </div>
       </div>
+
+
+
+
+
+
+
+      <div className="modal fade"  id="contactModal"  tabIndex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+          <div className="modal-dialog">
+                      <div className="modal-content">
+                              <div className="modal-header">
+                              <h5 className="modal-title" id="contactModalLabel">
+                                  Book a Site Visit
+                              </h5>
+                              <button type="button" className="btn-close" data-bs-dismiss="modal"></button>
+                      </div>
+                      <div className="modal-body">
+                      <form>
+                        <div className="mb-3">
+                          <label className="form-label">Name</label>
+                          <input type="text" className="form-control" placeholder="Enter your name" />
+                        </div>
+
+                        <div className="mb-3">
+                          <label className="form-label">Phone</label>
+                          <input type="tel" className="form-control" placeholder="Enter your phone" />
+                        </div>
+
+                        <div className="mb-3">
+                          <label className="form-label">Email</label>
+                          <input type="email" className="form-control" placeholder="Enter your email" />
+                        </div>
+
+                        <button type="submit" className="btn btn-danger w-100">
+                          Submit
+                        </button>
+                      </form>
+                      </div>
+                </div>
+          </div>
+      </div>
     </div>
+
+
+
   );
 };
 

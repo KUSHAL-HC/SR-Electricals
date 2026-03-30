@@ -5,21 +5,21 @@ const Contact = () => {
   return (
     <div className="precision-container">
       <header className="hero text-white px-5 py-5">
-        <div className="content-wrapper">
+        <div className="content-wrapper container">
           <span className="badge">CONNECT WITH US</span>
           <h1 className="my-3 display-5">Get in Touch</h1>
-          <p className="opacity-75">
+          <p className="opacity-75 m-0">
             Whether you're looking for expert editorial guidance or have a specific project in mind, 
             our team is ready to help you craft your narrative with architectural precision.
           </p>
         </div>
       </header>
 
-      <main className="contact-section bg-light px-5 py-5">
+      <main className="contact-section bg-gray px-5 py-5" style={{marginTop:"40px"}}>
         <div className="content-grid row g-4">
           
-          <section className="form-card col-lg-8 bg-white p-4 rounded shadow-sm">
-            <h2>Send a Message</h2>
+          <section className="form-card col-lg-8 bg-white p-4 rounded shadow-lg">
+            <h2 className='text-dark'>Send a Message</h2>
 
             <form>
               <div className="form-row row g-3">
