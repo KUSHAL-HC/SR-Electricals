@@ -21,9 +21,9 @@ const Home = () => {
           Contact us : 8431420127 || 8971023116
         </div>
         <div className="bg-danger text-white px-3 py-2">
-          <Link to="/Contact" style={{color:"white",textUnderlineOffset:"none"}}>
+          <div style={{color:"white",textUnderlineOffset:"none",cursor:"pointer"}} data-bs-toggle="modal" data-bs-target="#contactModal">
               Book A Site Visit
-          </Link>
+          </div>
         </div>
       </div>
       
@@ -73,7 +73,7 @@ const Home = () => {
                   <div className="card-body">
                     <h5 className="card-title">Card title</h5>
                     <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-                    <a href="#" className="btn btn-primary">Go somewhere</a>
+                    <button onClick={()=>{window.open('/broucher.pdf','_blank')}} className="btn btn-primary">Go somewhere</button>
                   </div>
                 </div>
               </div>

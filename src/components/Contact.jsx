@@ -1,7 +1,17 @@
 import React from 'react';
 import './Contact.css';
+import location from '../assets/location.png'
 
 const Contact = () => {
+
+
+
+  const openLocation = ()=>{
+    const lat = "13.17210"
+    const log = "77.56393"
+
+    window.open(`https://www.google.com/maps?q=${lat},${log}`, "_blank");
+  }
   return (
     <div className="precision-container">
       <header className="hero text-white px-5 py-5">
@@ -16,7 +26,7 @@ const Contact = () => {
       </header>
 
       <main className="contact-section bg-gray px-5 py-5" style={{marginTop:"40px"}}>
-        <div className="content-grid row g-4">
+        <div className="content-grid row g-4" style={{maxWidth:""}}>
           
           <section className="form-card col-lg-8 bg-white p-4 rounded shadow-lg">
             <h2 className='text-dark'>Send a Message</h2>
@@ -51,21 +61,23 @@ const Contact = () => {
             </form>
           </section>
 
-          <aside className="sidebar col-lg-4">
+          <aside className="sidebar col-lg-4" style={{flexDirection:"column",alignItems:"center"}}>
             
             <div className="info-block mb-4">
-              <h3>Our Studio</h3>
+              <h3>Our Studio Location</h3>
 
-              <div className="studio-details d-flex gap-3 align-items-start">
+              <div className="studio-details d-flex gap-3 align-items-start" style={{flexDirection:"row",justifyContent:"center"}}>
                 <div className="icon-box-blue">📍</div>
                 <div>
-                  <strong>Manhattan HQ</strong><br />
-                  245 Lexington Avenue, Suite 400<br />
+                  <strong>Manhattan HQ</strong>
+                  <br />245 Lexington Avenue, Suite 400<br />
                   New York, NY 10016
                 </div>
               </div>
 
-              <div className="map-placeholder mt-3 position-relative rounded"></div>
+              <div className="map-placeholder mt-3 position-relative rounded" onClick={openLocation} style={{overflow:'hidden',objectFit:"contain",objectPosition:"center",cursor:"pointer"}}>
+                     <img src={location} alt="Map Location" className="img-fluid rounded"/>
+              </div>
             </div>
 
             <div className="info-block mb-4">
