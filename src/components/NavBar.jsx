@@ -15,7 +15,6 @@ const NavBar = () => {
                 <Link className="nav-link nav-hover" to="/About">About</Link>
                 <Link className="nav-link nav-hover" to="/AMC">AMC</Link>
                 <Link className="nav-link nav-hover" to="/Contact">Contact-Us</Link>
-                <button className="btn btn-primary ms-3" >Get Started</button>
             </div>
         </div>
     </nav>

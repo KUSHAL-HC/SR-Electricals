@@ -1,7 +1,19 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import heroimage from "../assets/hero-transformer.png"
 
 const AMC = () => {
+
+let downloadBroucher = ()=>{
+    let link = document.createElement("a");
+    link.href = "/broucher.pdf";
+    link.download = "Company-broucher.pdf";
+    document.body.appendChild(link);
+    link.click(); 
+    document.body.removeChild(link);
+}
+
+
   return (
     <div>
        <section>
@@ -17,7 +29,7 @@ const AMC = () => {
     <section className="d-flex flex-column align-items-center" style={{margin:"100px 0px 100px 0px"}}>
         <h1 className='text-dark'>Find an AMC Plan That Works For You</h1>
         <p>At UPT, we offer two plans under our Annual Maintenance Contract - Comprehensive and Non-comprehensive.</p>
-        <button type="button" className="btn btn-success">Download Brochure</button>
+        <button type="button" className="btn btn-success" onClick={downloadBroucher}>Download Brochure</button>
     </section>
 
     <section  className="d-flex flex-column justify-content-center align-items-center" style={{alignItems:"stretch",textAlign:"center",gap:"80px"}}>
@@ -62,7 +74,7 @@ const AMC = () => {
     </div>
     <div style={{marginBottom:"100px"}}>
         <h1 className="text-dark">To find a plan that suits your requirements, get in touch.</h1>
-        <button type="button" className="btn btn-danger">Contact Us</button>
+        <Link type="button" className="btn btn-danger" style={{ textDecoration: "none" }} to="/Contact">Contact Us</Link>
     </div>
     </section>    
     </div>
