@@ -45,6 +45,13 @@ const Contact = () => {
                   type:"success",
                   message:" Your form has been submitted successfully!"
                 });
+
+                setFormData({
+                  fullName: "",
+                  email: "",
+                  subject: "",
+                  message: ""
+                });
               } else{
                 setAlert({
                   type:"error",
@@ -90,34 +97,35 @@ const Contact = () => {
           <section className="form-card col-lg-8 bg-white p-4 rounded shadow-lg">
             <h2 className='text-dark'>Send a Message</h2>
 
-            {alert.show && (
+            {/* {alert.show && (
                     <div className={`custom-alert ${alert.type}`}>
                     {alert.message}
-                    </div>)}
+                    </div>)} */}
 
-            
+            <Alert type={alert.type} message={alert.message} />
+              
             <form onSubmit={handleSubmit}>
               <div className="form-row row g-3">
                 
                 <div className="form-group col-md-6">
                   <label className="form-label text-muted small fw-bold">FULL NAME</label>
-                  <input type="text" name="fullname" className="form-control" placeholder="John Doe"  value={formData.fullname} onChange={handleChange}/>
+                  <input type="text" name="fullName" className="form-control" placeholder="John Doe"  value={formData.fullName} onChange={handleChange} required/>
                 </div>
 
                 <div className="form-group col-md-6">
                   <label className="form-label text-muted small fw-bold">EMAIL ADDRESS</label>
-                  <input type="email" name="email" className="form-control" placeholder="john@example.com" value={formData.email}  onChange={handleChange}/>
+                  <input type="email" name="email" className="form-control" placeholder="john@example.com" value={formData.email}  onChange={handleChange} required/>
                 </div>
               </div>
 
               <div className="form-group mt-3">
                 <label className="form-label text-muted small fw-bold">SUBJECT</label>
-                <input name="subject" type="text" className="form-control" placeholder="How can we help?" value={formData.subject} onChange={handleChange}/>
+                <input name="subject" type="text" className="form-control" placeholder="How can we help?" value={formData.subject} onChange={handleChange} required/>
               </div>
 
               <div className="form-group mt-3">
                 <label className="form-label text-muted small fw-bold">MESSAGE</label>
-                <textarea name="message" className="form-control" rows="6" placeholder="Tell us more about your inquiry..." value={formData.message} onChange={handleChange}></textarea>
+                <textarea name="message" className="form-control" rows="6" placeholder="Tell us more about your inquiry..." value={formData.message} onChange={handleChange} required></textarea>
               </div>
 
               <button type="submit" className="btn btn-primary mt-3 px-4 py-2">

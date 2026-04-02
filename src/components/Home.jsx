@@ -3,8 +3,14 @@ import React, { useState } from 'react';
 import engineer from "../assets/engineer.png";
 import '../App.css';
 import HeroSlider from './HeroSlider';
+import Alert from './Alert';
 
 const Home = () => {
+
+   const [alert, setAlert] = useState({
+      type: "",
+      message: ""
+    });
 
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
@@ -21,13 +27,18 @@ const Home = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    if (!name || !phone || !email) {
-      alert("All fields are required");
+  
+    // ✅ Manual validation
+    if (!name.trim() || !phone.trim() || !email.trim()) {
+      setAlert({
+        type: "error",
+        message: "❌ Please fill all fields"
+      });
       return;
     }
+  
     const data = { name, phone, email };
-
+  
     try {
       const res = await fetch("http://localhost:8000/book", {
         method: "POST",
@@ -36,18 +47,35 @@ const Home = () => {
         },
         body: JSON.stringify(data)
       });
-
-      const result = await res.json();
-
-      setName("");
-      setPhone("");
-      setEmail("");
-      alert("Booking submitted successfully!");
-
+  
+      if (res.ok) {
+        setAlert({
+          type: "success",
+          message: "✅ Your form has been submitted successfully!"
+        });
+  
+        // ✅ Correct way to clear form
+        setName("");
+        setPhone("");
+        setEmail("");
+  
+      } else {
+        setAlert({
+          type: "error",
+          message: "❌ Failed to submit form"
+        });
+      }
+  
     } catch (err) {
-      console.log(err);
-      alert("Error submitting form");
+      setAlert({
+        type: "error",
+        message: "❌ Server error. Try again."
+      });
     }
+  
+    setTimeout(() => {
+      setAlert({ type: "", message: "" });
+    }, 3000);
   };
 
   return (
@@ -143,10 +171,12 @@ const Home = () => {
                   <label className="form-label">Name</label>
                   <input
                     type="text"
+                    name='name'
                     className="form-control"
                     placeholder="Enter your name"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
+                    required
                   />
                 </div>
 
@@ -154,10 +184,12 @@ const Home = () => {
                   <label className="form-label">Phone</label>
                   <input
                     type="tel"
+                    name="phone"
                     className="form-control"
                     placeholder="Enter your phone"
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
+                    required
                   />
                 </div>
 
@@ -165,12 +197,16 @@ const Home = () => {
                   <label className="form-label">Email</label>
                   <input
                     type="email"
+                    name="email"
                     className="form-control"
                     placeholder="Enter your email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
+                    required
                   />
                 </div>
+
+                <Alert type={alert.type} message={alert.message} />
 
                 <button type="submit" className="btn btn-danger w-100">
                   Submit
