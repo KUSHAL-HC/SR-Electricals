@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
+const Contacting = require("./models/Contacting.js");
 require("dotenv").config();
 
 
@@ -49,6 +50,17 @@ app.post("/book", async (req, res) => {
     });
   }
 });
+
+
+app.post("/api/Contacting",async(req,res)=>{
+  try{
+    const data = new Contacting(req.body);
+    await data.save();
+    res.status(201).json({message:"Contacting form data saved"});
+  }catch(error){
+    res.status(500).json({error:error.message});
+  }
+})
 
 // Connect DB and start server
 mongoose.connect(process.env.MONGO_URI)

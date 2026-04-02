@@ -1,17 +1,76 @@
-import React from 'react';
+import React,{useState} from 'react';
 import './Contact.css';
-import location from '../assets/location.png'
+import location from '../assets/location.png';
+import Alert from "./Alert";
 
 const Contact = () => {
 
 
+  const [alert, setAlert] = useState({
+    type: "",
+    message: ""
+  });
+
+
+  const [formData, setFormData] = useState({
+    fullName: "",
+    phone: "",
+    email: "",
+    subject: "",
+    message: ""
+  });
+
+  const handleChange = (e) => {
+          setFormData({
+            ...formData,
+            [e.target.name]: e.target.value
+          });
+        };
+          const handleSubmit = async (e) => {
+            e.preventDefault();
+
+            try {
+              const res = await fetch("http://localhost:8000/api/Contacting", {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json"
+                },
+                body: JSON.stringify(formData)
+              });
+
+              if(res.ok)
+              {
+                setAlert({
+                  show:true,
+                  type:"success",
+                  message:" Your form has been submitted successfully!"
+                });
+              } else{
+                setAlert({
+                  type:"error",
+                  message:"Failed to submit form"
+                })
+              }
+              const data = await res.json();
+              console.log(data);
+            }catch (error) {
+              setAlert({
+                show: true,
+                type: "error",
+                message: "Failed to submit form. Try again."
+              });
+            }
+            setTimeout(() => {
+              setAlert({ type: "", message: "" });
+            }, 3000);
+          };
 
   const openLocation = ()=>{
     const lat = "13.17210"
     const log = "77.56393"
-
     window.open(`https://www.google.com/maps?q=${lat},${log}`, "_blank");
   }
+
   return (
     <div className="precision-container">
       <header className="hero text-white px-5 py-5">
@@ -31,28 +90,34 @@ const Contact = () => {
           <section className="form-card col-lg-8 bg-white p-4 rounded shadow-lg">
             <h2 className='text-dark'>Send a Message</h2>
 
-            <form>
+            {alert.show && (
+                    <div className={`custom-alert ${alert.type}`}>
+                    {alert.message}
+                    </div>)}
+
+            
+            <form onSubmit={handleSubmit}>
               <div className="form-row row g-3">
                 
                 <div className="form-group col-md-6">
                   <label className="form-label text-muted small fw-bold">FULL NAME</label>
-                  <input type="text" className="form-control" placeholder="John Doe" />
+                  <input type="text" name="fullname" className="form-control" placeholder="John Doe"  value={formData.fullname} onChange={handleChange}/>
                 </div>
 
                 <div className="form-group col-md-6">
                   <label className="form-label text-muted small fw-bold">EMAIL ADDRESS</label>
-                  <input type="email" className="form-control" placeholder="john@example.com" />
+                  <input type="email" name="email" className="form-control" placeholder="john@example.com" value={formData.email}  onChange={handleChange}/>
                 </div>
               </div>
 
               <div className="form-group mt-3">
                 <label className="form-label text-muted small fw-bold">SUBJECT</label>
-                <input type="text" className="form-control" placeholder="How can we help?" />
+                <input name="subject" type="text" className="form-control" placeholder="How can we help?" value={formData.subject} onChange={handleChange}/>
               </div>
 
               <div className="form-group mt-3">
                 <label className="form-label text-muted small fw-bold">MESSAGE</label>
-                <textarea className="form-control" rows="6" placeholder="Tell us more about your inquiry..."></textarea>
+                <textarea name="message" className="form-control" rows="6" placeholder="Tell us more about your inquiry..." value={formData.message} onChange={handleChange}></textarea>
               </div>
 
               <button type="submit" className="btn btn-primary mt-3 px-4 py-2">
