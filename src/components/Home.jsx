@@ -27,8 +27,7 @@ const Home = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
-    // ✅ Manual validation
+
     if (!name.trim() || !phone.trim() || !email.trim()) {
       setAlert({
         type: "error",
@@ -164,7 +163,7 @@ const Home = () => {
               <button type="button" className="btn-close" data-bs-dismiss="modal"></button>
             </div>
 
-            <div className="modal-body">
+            <div className="modal-body" style={{minHeight:"460px"}}>
               <form onSubmit={handleSubmit}>
 
                 <div className="mb-3">
@@ -205,13 +204,11 @@ const Home = () => {
                     required
                   />
                 </div>
-
-                <Alert type={alert.type} message={alert.message} />
-
                 <button type="submit" className="btn btn-danger w-100">
                   Submit
                 </button>
 
+                <Alert type={alert.type} message={alert.message} />
               </form>
             </div>
 

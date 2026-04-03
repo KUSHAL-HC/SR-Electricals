@@ -94,15 +94,13 @@ const Contact = () => {
       <main className="contact-section bg-gray px-5 py-5" style={{marginTop:"40px"}}>
         <div className="content-grid row g-4" style={{maxWidth:""}}>
           
-          <section className="form-card col-lg-8 bg-white p-4 rounded shadow-lg">
+          <section className="form-card col-lg-8 bg-white p-4 rounded shadow-lg" style={{minHeight:"630px"}}>
             <h2 className='text-dark'>Send a Message</h2>
 
             {/* {alert.show && (
                     <div className={`custom-alert ${alert.type}`}>
                     {alert.message}
                     </div>)} */}
-
-            <Alert type={alert.type} message={alert.message} />
               
             <form onSubmit={handleSubmit}>
               <div className="form-row row g-3">
@@ -132,6 +130,7 @@ const Contact = () => {
                 Send Message <span>➤</span>
               </button>
             </form>
+            <Alert type={alert.type} message={alert.message}/>
           </section>
 
           <aside className="sidebar col-lg-4" style={{flexDirection:"column",alignItems:"center"}}>

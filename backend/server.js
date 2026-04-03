@@ -38,16 +38,19 @@ app.post("/book", async (req, res) => {
 
     await newBooking.save();
 
-    res.status(201).json({
-      message: "Booking saved successfully",
-      data: newBooking
-    });
-
+    console.log("sendingg wats app message");
+    await client.messages.create({
+      from:"whatsapp:+14155238886",
+      to:"whatsapp:+918431420127",
+      body:` New Form Submission:
+            Name: ${name}
+            phone: ${phone}
+            email: ${email}`
+    })
+    console.log("wats app message sent");
+    res.status(201).json({ message: "Saved + WhatsApp sent" });
   } catch (error) {
-    res.status(500).json({
-      message: "Error saving booking",
-      error: error.message
-    });
+    res.status(500).json({ error: error.message });
   }
 });
 
@@ -75,3 +78,10 @@ mongoose.connect(process.env.MONGO_URI)
 .catch((err) => {
   console.log("MongoDB connection error:", err);
 });
+
+const twilio = require("twilio");
+
+const client = new twilio(
+  process.env.TWILIO_SID,
+  process.env.TWILIO_AUTH_TOKEN
+);
