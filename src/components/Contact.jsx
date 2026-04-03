@@ -48,6 +48,7 @@ const Contact = () => {
 
                 setFormData({
                   fullName: "",
+                  phone: "",
                   email: "",
                   subject: "",
                   message: ""

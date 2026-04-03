@@ -57,11 +57,30 @@ app.post("/book", async (req, res) => {
 
 app.post("/api/Contacting",async(req,res)=>{
   try{
-    const data = new Contacting(req.body);
-    await data.save();
-    res.status(201).json({message:"Contacting form data saved"});
+
+    const { fullName,phone,email,subject,message } = req.body;
+
+    const newContacting  = new Contacting({
+      fullName,phone,email,subject,message
+    });
+
+    await newContacting.save();
+
+
+    await client.messages.create({
+      from:"whatsapp:+14155238886",
+      to:"whatsapp:+918431420127",
+      body:` New Form Submission:
+            fullName: ${fullName}
+            phone: ${phone}
+            email: ${email}
+            subject:${subject}
+            message:${message}`
+    })
+  
+    res.status(201).json({ message: "Saved + WhatsApp sent" });
   }catch(error){
-    res.status(500).json({error:error.message});
+    res.status(500).json({ error: error.message });
   }
 })
 
