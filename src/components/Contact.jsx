@@ -74,8 +74,8 @@ const Contact = () => {
           };
 
   const openLocation = ()=>{
-    const lat = "13.17210"
-    const log = "77.56393"
+    const lat = "13.03546894263142"
+    const log = "77.48964928603645"
     window.open(`https://www.google.com/maps?q=${lat},${log}`, "_blank");
   }
 
@@ -137,14 +137,16 @@ const Contact = () => {
           <aside className="sidebar col-lg-4" style={{flexDirection:"column",alignItems:"center"}}>
             
             <div className="info-block mb-4">
-              <h3>Our Studio Location</h3>
+              <h3>Our Office Location</h3>
 
-              <div className="studio-details d-flex gap-3 align-items-start" style={{flexDirection:"row",justifyContent:"center"}}>
-                <div className="icon-box-blue">📍</div>
-                <div>
-                  <strong>Manhattan HQ</strong>
-                  <br />245 Lexington Avenue, Suite 400<br />
-                  New York, NY 10016
+              <div className="studio-details d-flex  align-items-start" style={{flexDirection:"row",justifyContent:"center"}}>
+                <div style={{maxWidth:"300px",display:"flex"}}>
+                    <div className="icon-box-blue">📍</div>
+                    <div>
+                      <strong>Doddabidarakallu ,Nagasandra Post,Bengalure - 560073</strong>
+                      <br />#16 ,2nd Cross Road,Maranna Layout,Near Panchamukhi Ganesha Temple Road<br />
+                      New York, NY 10016
+                    </div>
                 </div>
               </div>
 
@@ -155,8 +157,8 @@ const Contact = () => {
 
             <div className="info-block mb-4">
               <h3>Direct Access</h3>
-              <p className="mb-1">📞 +1 (212) 555-0198</p>
-              <p>✉️ hello@precisioneditorial.com</p>
+              <p className="mb-1">📞 +91 9900563782</p>
+              <p>✉️ sre2425@gmail.com</p>
             </div>
 
             <div className="availability-card d-flex gap-3 p-3 rounded">

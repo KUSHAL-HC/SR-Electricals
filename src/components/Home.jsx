@@ -82,7 +82,7 @@ const Home = () => {
 
       <div className="d-flex justify-content-end bg-light">
         <div className="bg-dark text-white px-3 py-2">
-          Contact us : 8431420127 || 8971023116
+          Contact us : 9900563782 || 8150848848
         </div>
         <div data-bs-toggle="modal"  data-bs-target="#contactModal"  className="bg-danger text-white px-3 py-2" style={{ cursor: "pointer" }}>
             Book A Site Visit
