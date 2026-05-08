@@ -11,19 +11,9 @@ const Home = () => {
       type: "",
       message: ""
     });
-
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
-
-  let downloadBroucher = () => {
-    const link = document.createElement("a");
-    link.href = "/brochure.pdf";
-    link.download = "Company-broucher.pdf";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -88,19 +78,15 @@ const Home = () => {
             Book A Site Visit
         </div>
       </div>
-
       <HeroSlider />
 
 
       <div className="container bg-danger text-white text-center p-5 shadow position-relative z-100" style={{ marginTop: "-50px" }}>
         <h2>Experts In Transformer And Switchgear Maintenance</h2>
         <p>
-          UPTSS, the dedicated service arm of Universal Power Transformer Pvt. Ltd.,
+          UPTSS, the dedicated service arm of Sri Raghavendra Electricals,
           is committed to providing exceptional maintenance solutions.
         </p>
-        <button className="btn btn-light" onClick={downloadBroucher}>
-          Download Brochure
-        </button>
       </div>
 
       <div className="container text-center mt-5">
