@@ -144,7 +144,6 @@ const Contact = () => {
                     <div>
                       <strong>Doddabidarakallu ,Nagasandra Post,Bengalure - 560073</strong>
                       <br />#16 ,2nd Cross Road,Maranna Layout,Near Panchamukhi Ganesha Temple Road<br />
-                      New York, NY 10016
                     </div>
                 </div>
               </div>

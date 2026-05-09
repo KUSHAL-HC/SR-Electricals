@@ -1,5 +1,4 @@
 import React from 'react'
-import conclusion from '../assets/conclusion.png'
 
 const Footer = () => {
   return (
