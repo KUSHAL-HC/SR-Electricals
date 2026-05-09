@@ -7,6 +7,8 @@ const Contacting = require("./models/Contacting.js");
 const Booking = require("./models/Booking");
 
 const app = express();
+console.log("SID RAW:", JSON.stringify(process.env.TWILIO_ACCOUNT_SID));
+console.log("TOKEN RAW:", JSON.stringify(process.env.TWILIO_AUTH_TOKEN));
 
 // Middleware
 app.use(cors());
@@ -104,7 +106,7 @@ mongoose.connect(process.env.MONGO_URI)
 
 const twilio = require("twilio");
 
-const client = new twilio(
-  process.env.TWILIO_SID,
+const client = twilio(
+  process.env.TWILIO_ACCOUNT_SID,
   process.env.TWILIO_AUTH_TOKEN
 );
