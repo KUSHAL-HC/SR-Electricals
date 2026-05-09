@@ -19,7 +19,6 @@ const Contact = () => {
     subject: "",
     message: ""
   });
-
   const handleChange = (e) => {
           setFormData({
             ...formData,
@@ -191,22 +190,6 @@ const Contact = () => {
 
         </div>
       </section>
-
-      <footer className="footer px-5 py-4">
-        <div className="footer-bottom d-flex justify-content-between align-items-center border-top pt-3">
-          
-          <p className="mb-0 small">© 2024 THE PRECISION EDITORIAL. ALL RIGHTS RESERVED.</p>
-
-          <div className="footer-links d-flex">
-            <a href="#privacy" className="ms-3 text-decoration-none small">PRIVACY POLICY</a>
-            <a href="#terms" className="ms-3 text-decoration-none small">TERMS OF SERVICE</a>
-            <a href="#cookie" className="ms-3 text-decoration-none small">COOKIE SETTINGS</a>
-            <a href="#access" className="ms-3 text-decoration-none small">ACCESSIBILITY</a>
-          </div>
-
-        </div>
-      </footer>
-
     </div>
   );
 };
