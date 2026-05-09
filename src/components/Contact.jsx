@@ -29,6 +29,7 @@ const Contact = () => {
             e.preventDefault();
 
             try {
+              console.log(formData);
               const res = await fetch("http://localhost:8000/api/Contacting", {
                 method: "POST",
                 headers: {
@@ -110,6 +111,11 @@ const Contact = () => {
                   <input type="text" name="fullName" className="form-control" placeholder="John Doe"  value={formData.fullName} onChange={handleChange} required/>
                 </div>
                 
+                <div className="form-group col-md-6">
+                  <label className="form-label text-muted small fw-bold">Phone Number</label>
+                  <input type="tel" name="phone" placeholder="Phone Number" className="form-control" value={formData.phone} onChange={handleChange} required/>
+                </div>
+
                 <div className="form-group col-md-6">
                   <label className="form-label text-muted small fw-bold">EMAIL ADDRESS</label>
                   <input type="email" name="email" className="form-control" placeholder="john@example.com" value={formData.email}  onChange={handleChange} required/>
