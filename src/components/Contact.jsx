@@ -109,7 +109,7 @@ const Contact = () => {
                   <label className="form-label text-muted small fw-bold">FULL NAME</label>
                   <input type="text" name="fullName" className="form-control" placeholder="John Doe"  value={formData.fullName} onChange={handleChange} required/>
                 </div>
-
+                
                 <div className="form-group col-md-6">
                   <label className="form-label text-muted small fw-bold">EMAIL ADDRESS</label>
                   <input type="email" name="email" className="form-control" placeholder="john@example.com" value={formData.email}  onChange={handleChange} required/>

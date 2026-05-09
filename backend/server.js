@@ -1,9 +1,8 @@
+require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const Contacting = require("./models/Contacting.js");
-require("dotenv").config();
-
 
 const Booking = require("./models/Booking");
 
@@ -38,7 +37,7 @@ app.post("/book", async (req, res) => {
 
     await newBooking.save();
 
-    console.log("sendingg wats app message");
+    console.log("Saved to DB");
     await client.messages.create({
       from:"whatsapp:+14155238886",
       to:"whatsapp:+918431420127",
@@ -47,10 +46,14 @@ app.post("/book", async (req, res) => {
             phone: ${phone}
             email: ${email}`
     })
-    console.log("wats app message sent");
     res.status(201).json({ message: "Saved + WhatsApp sent" });
-  } catch (error) {
-    res.status(500).json({ error: error.message });
+  } catch (err) {
+    console.log("TWILIO/FULL ERROR:");
+    console.log(err);
+
+    res.status(500).json({
+        error: err.message
+    });
   }
 });
 
