@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-
-import engineer from "../assets/engineer.png";
 import '../App.css';
 import HeroSlider from './HeroSlider';
 import Alert from './Alert';
@@ -89,55 +87,100 @@ const Home = () => {
         </p>
       </div>
 
-      <div className="container text-center mt-5">
-        <h2 className="mb-4 text-dark">General Transformer Services</h2>
+  
 
-        <div className="text-start" style={{display:"flex",flexDirection:"row",width:"100%",justifyContent:"space-between"}}>
-          <div >
-            <p>✔ Oil filtration</p>
-            <p>✔ General Repairs</p>
-            <p>✔ OLTC service</p>
-          </div>
-          <div >
-            <p>✔ Supply of spares</p>
-            <p>✔ Replacement of spares</p>
-            <p>✔ Oil leakage</p>
-          </div>
-          <div >
-            <p>✔ Dry maintenance</p>
-            <p>✔ Tap repair</p>
-            <p>✔ Oil testing</p>
-          </div>
-        </div>
-      </div>
+      <div className="container py-5">
+          <div className="service-heading text-center mb-5">
+                
+                <h2 className="service-main-title">General Transformer Services</h2>
+                <div className="title-line"></div>
 
-      <div className="bg-danger text-white text-center py-5 mt-5">
-        <h2 className="mb-4">Specialised Services</h2>
-
-        <div className="container">
-          <div className="row g-4">
-            {[1, 2, 3].map((item) => (
-              <div className="col-md-4" key={item}>
-                <div className="card my-card-hover" style={{ width: "18rem" }}>
-                  <img src={engineer} className="card-img-top" alt="service" />
-                  <div className="card-body">
-                    <h5 className="card-title">Card title</h5>
-                    <p className="card-text">
-                      Some quick example text to build on the card title.
-                    </p>
-                    <button
-                      onClick={() => window.open('/broucher.pdf', '_blank')}
-                      className="btn btn-primary"
-                    >
-                      Go somewhere
-                    </button>
-                  </div>
+                <p className="service-subtitle">Professional maintenance and transformer support solutions with reliable industrial expertise.</p>
                 </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
+                <div className="row g-4">
+                    {/* CARD 1 */}
+                    <div className="col-md-4">
+                        <div className="service-card">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="service-icon" viewBox="0 0 16 16">
+                                <path d="M8 0C5 4 3 6 3 9a5 5 0 0 0 10 0c0-3-2-5-5-9z"/>
+                            </svg>
+                            <h5 className="service-title">Oil Filtration</h5>
+                        </div>
+                    </div>
+                    {/* CARD 2 */}
+                    <div className="col-md-4">
+                        <div className="service-card">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="service-icon" viewBox="0 0 16 16">
+                                <path d="M15.502 1.94a.5.5 0 0 1 0 .706l-1.793 1.793-2.647-2.647L12.855 0.5a.5.5 0 0 1 .707 0l1.94 1.94zM10.293 3.207 1 12.5V15h2.5l9.293-9.293-2.5-2.5z"/>
+                            </svg>
+                            <h5 className="service-title">General Repairs</h5>
+                        </div>
+                    </div>
+                    {/* CARD 3 */}
+                    <div className="col-md-4">
+                        <div className="service-card">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="service-icon" viewBox="0 0 16 16">
+                                <path d="M6 0a2 2 0 0 0-2 2v2H2v2h2v2H2v2h2v2a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-2h2V8h-2V6h2V4h-2V2a2 2 0 0 0-2-2H6z"/>
+                            </svg>
+                            <h5 className="service-title">OLTC Service</h5>
+                        </div>
+                    </div>
+                    {/* CARD 4 */}
+                    <div className="col-md-4">
+                        <div className="service-card">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="service-icon" viewBox="0 0 16 16">
+                                <path d="M8 0l8 4v8l-8 4-8-4V4l8-4z"/>
+                            </svg>
+                            <h5 className="service-title">Supply of Spares</h5>
+                        </div>
+                    </div>
+                    {/* CARD 5 */}
+                    <div className="col-md-4">
+                        <div className="service-card">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="service-icon" viewBox="0 0 16 16">
+                                <path d="M1 8a7 7 0 1 1 14 0A7 7 0 0 1 1 8zm7-4a.5.5 0 0 0-.5.5V8H5a.5.5 0 0 0 0 1h3a.5.5 0 0 0 .5-.5v-4A.5.5 0 0 0 8 4z"/>
+                            </svg>
+                            <h5 className="service-title">Replacement of Spares</h5>
+                        </div>
+                    </div>
+                    {/* CARD 6 */}
+                    <div className="col-md-4">
+                        <div className="service-card">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="service-icon" viewBox="0 0 16 16">
+                                <path d="M8 1s4 4.686 4 7a4 4 0 1 1-8 0c0-2.314 4-7 4-7z"/>
+                            </svg>
+                            <h5 className="service-title">Oil Leakage</h5>
+                        </div>
+                    </div>
+                    {/* CARD 7 */}
+                    <div className="col-md-4">
+                        <div className="service-card">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="service-icon" viewBox="0 0 16 16">
+                                <path d="M4 1h8v14H4z"/>
+                            </svg>
+                            <h5 className="service-title">Dry Maintenance</h5>
+                        </div>
+                    </div>
+                    {/* CARD 8 */}
+                    <div className="col-md-4">
+                        <div className="service-card">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="service-icon" viewBox="0 0 16 16">
+                                <path d="M6.5 0a.5.5 0 0 1 .5.5V2h2V.5a.5.5 0 0 1 1 0V2h1a1 1 0 0 1 1 1v2h-1V3H5v2H4V3a1 1 0 0 1 1-1h1V.5a.5.5 0 0 1 .5-.5z"/>
+                            </svg>
+                            <h5 className="service-title">Tap Repair</h5>
+                        </div>
+                    </div>
+                    {/* CARD 9 */}
+                    <div className="col-md-4">
+                        <div className="service-card">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="service-icon" viewBox="0 0 16 16">
+                                <path d="M8 0a5 5 0 0 0-5 5c0 3 5 11 5 11s5-8 5-11a5 5 0 0 0-5-5z"/>
+                            </svg>
+                            <h5 className="service-title">Oil Testing</h5>
+                        </div>
+                    </div>
+                </div>
+      </div>   
 
       {/* MODAL */}
       <div className="modal fade" id="contactModal" tabIndex="-1">

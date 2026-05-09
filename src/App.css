@@ -225,3 +225,68 @@
   background: rgba(0, 0, 0, 0.4);
 }
 
+
+
+/*home page design*/
+/* CARD DESIGN */
+.service-card{
+  border: none;
+  border-radius: 20px;
+  padding: 30px 20px;
+  text-align: center;
+  background: #fff;
+  transition: all 0.4s ease;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+/* TOP GLOW LINE */
+.service-card::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(to right,#0d6efd,#00c6ff);
+  transition: 0.5s;
+}
+
+/* HOVER EFFECT */
+.service-card:hover{
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+/* ANIMATED TOP BORDER */
+.service-card:hover::before{
+  left: 0;
+}
+
+/* SVG ICON */
+.service-icon{
+  width: 60px;
+  height: 60px;
+  margin-bottom: 20px;
+  transition: 0.5s;
+}
+
+/* ICON ANIMATION */
+.service-card:hover .service-icon{
+  transform: rotateY(180deg) scale(1.1);
+}
+
+/* TITLE */
+.service-title{
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+/* TITLE COLOR CHANGE */
+.service-card:hover .service-title{
+  color: #0d6efd;
+}
