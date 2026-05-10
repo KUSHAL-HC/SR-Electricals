@@ -27,7 +27,8 @@ const Home = () => {
     const data = { name, phone, email };
   
     try {
-      const res = await fetch("http://localhost:8000/book", {
+      console.log(import.meta.env.VITE_API_URL);
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/book`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"

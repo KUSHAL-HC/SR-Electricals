@@ -7,8 +7,6 @@ const Contacting = require("./models/Contacting.js");
 const Booking = require("./models/Booking");
 
 const app = express();
-console.log("SID RAW:", JSON.stringify(process.env.TWILIO_ACCOUNT_SID));
-console.log("TOKEN RAW:", JSON.stringify(process.env.TWILIO_AUTH_TOKEN));
 
 // Middleware
 app.use(cors());
