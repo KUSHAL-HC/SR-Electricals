@@ -29,7 +29,6 @@ const Contact = () => {
             e.preventDefault();
 
             try {
-              console.log(formData);
               const res = await fetch("http://localhost:8000/api/Contacting", {
                 method: "POST",
                 headers: {
@@ -60,7 +59,6 @@ const Contact = () => {
                 })
               }
               const data = await res.json();
-              console.log(data);
             }catch (error) {
               setAlert({
                 show: true,
@@ -178,23 +176,6 @@ const Contact = () => {
 
         </div>
       </main>
-
-      <section className="consultation px-5 py-5">
-        <div className="consult-content d-flex justify-content-between align-items-center">
-          
-          <h2>Prefer a direct consultation?</h2>
-
-          <div className="consult-text">
-            <p>
-              Book a 15-minute introductory call with our lead curator to discuss your vision and see how our architectural approach can elevate your publication.
-            </p>
-            <a href="#schedule" className="arrow-link text-decoration-none">
-              Schedule an intro call <span>→</span>
-            </a>
-          </div>
-
-        </div>
-      </section>
     </div>
   );
 };
