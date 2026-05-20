@@ -90,7 +90,7 @@ const AMC = () => {
         {/* CARD 2 */}
         <div className="amc-card white-card">
 
-          <h1>Non-Comprehensive AMC Plan</h1>
+          <h1 style={{color:"black"}}>Non-Comprehensive AMC Plan</h1>
 
           <ul>
 

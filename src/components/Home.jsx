@@ -83,7 +83,7 @@ const Home = () => {
       <div className="container bg-danger text-white text-center p-5 shadow position-relative z-100" style={{ marginTop: "-50px" }}>
         <h2>Experts In Transformer And Switchgear Maintenance</h2>
         <p>
-          UPTSS, the dedicated service arm of Sri Raghavendra Electricals,
+          the dedicated service arm of Sri Raghavendra Electricals,
           is committed to providing exceptional maintenance solutions.
         </p>
       </div>
@@ -93,7 +93,7 @@ const Home = () => {
       <div className="container py-5">
           <div className="service-heading text-center mb-5">
                 
-                <h2 className="service-main-title">General Transformer Services</h2>
+                <h2 className="service-main-title" style={{color:"black"}}>General Transformer Services</h2>
                 <div className="title-line"></div>
 
                 <p className="service-subtitle">Professional maintenance and transformer support solutions with reliable industrial expertise.</p>
