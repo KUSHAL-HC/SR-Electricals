@@ -12,8 +12,8 @@ const app = express();
 app.use(cors({origin: [
   "http://localhost:5173",
   "http://localhost:4173",
-  "https://sr-electricals-git-main-kushalhc.vercel.app",
-  "https://sr-electricals-likw9tbip-kushalhc.vercel.app"
+  "https://sr-electricals.vercel.app",
+  "https://sr-electricals-git-main-kushalhc.vercel.app"
 ],
 methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
 credentials: true}));
