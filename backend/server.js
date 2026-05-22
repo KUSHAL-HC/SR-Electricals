@@ -92,11 +92,6 @@ app.post("/api/Contacting",async(req,res)=>{
 mongoose.connect(process.env.MONGO_URI)
 .then(() => {
   console.log("MongoDB connected");
-
-  app.listen(8000, () => {
-    console.log("Server running on http://localhost:8000");
-  });
-
 })
 .catch((err) => {
   console.log("MongoDB connection error:", err);
@@ -108,3 +103,18 @@ const client = twilio(
   process.env.TWILIO_ACCOUNT_SID,
   process.env.TWILIO_AUTH_TOKEN
 );
+
+
+const PORT = process.env.PORT || 8000;
+
+mongoose.connect(process.env.MONGO_URI)
+  .then(() => {
+    console.log("MongoDB connected");
+
+    app.listen(PORT, () => {
+      console.log(`Server running on port ${PORT}`);
+    });
+  })
+  .catch((err) => {
+    console.log("MongoDB connection error:", err);
+  });
