@@ -9,11 +9,13 @@ const Booking = require("./models/Booking");
 const app = express();
 
 // Middleware
-app.use(cors({origin:true,
-  origin:[
+app.use(cors({origin: [
   "http://localhost:5173",
-  "https://your-vercel-url.vercel.app"
-],credentials: true}));
+  "http://localhost:4173",
+  "https://sr-electricals.vercel.app"
+],
+methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+credentials: true}));
 app.use(express.json());
 
 // Test route

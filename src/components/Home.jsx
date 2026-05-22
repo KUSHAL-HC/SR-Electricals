@@ -41,8 +41,7 @@ const Home = () => {
           type: "success",
           message: "✅ Your form has been submitted successfully!"
         });
-  
-        // ✅ Correct way to clear form
+
         setName("");
         setPhone("");
         setEmail("");
