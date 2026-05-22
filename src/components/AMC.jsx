@@ -59,7 +59,7 @@ const AMC = () => {
         {/* CARD 1 */}
         <div className="amc-card red-card">
 
-          <h1>Comprehensive AMC Plan</h1>
+          <h1 style={{color:"white"}}>Comprehensive AMC Plan</h1>
 
           <ul>
 
