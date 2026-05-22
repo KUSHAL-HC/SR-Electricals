@@ -3,9 +3,9 @@
 import React from "react";
 import "./about.css";
 
-import heroImage from "../assets/hero-transformer.png";
-import vision from "../assets/vision.png";
-import target from "../assets/target.png";
+import heroImage from "../assets/hero-transformer.webp";
+import vision from "../assets/vision.webp";
+import target from "../assets/target.webp";
 
 const About = () => {
   return (

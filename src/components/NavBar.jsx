@@ -1,6 +1,6 @@
 import React from 'react'
 import { NavLink,useLocation} from 'react-router-dom'
-import logo from '../assets/logo_SRE.jpg'
+import logo from '../assets/logo_SRE.webp'
 
 const NavBar = () => {
 

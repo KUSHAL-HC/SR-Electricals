@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import "./style/amc.css"
-import heroimage from "../assets/hero-transformer.png"
+import heroimage from "../assets/hero-transformer.webp"
 
 const AMC = () => {
   return (

@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
 import './Contact.css';
-import location from '../assets/location.png';
+import location from '../assets/location.webp';
 import Alert from "./Alert";
 
 const Contact = () => {
