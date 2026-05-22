@@ -27,7 +27,6 @@ const Home = () => {
     const data = { name, phone, email };
   
     try {
-      console.log(import.meta.env.VITE_API_URL);
       const res = await fetch(`${import.meta.env.VITE_API_URL}/book`, {
         method: "POST",
         headers: {
@@ -70,7 +69,7 @@ const Home = () => {
 
       <div className="d-flex justify-content-end bg-light">
         <div className="bg-dark text-white px-3 py-2">
-          Contact us : 9900563782 ||  86606 28517
+          Contact us : 9900563782 || 86606 28517
         </div>
         <div data-bs-toggle="modal"  data-bs-target="#contactModal"  className="bg-danger text-white px-3 py-2" style={{ cursor: "pointer" }}>
             Book A Site Visit
