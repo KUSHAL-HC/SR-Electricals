@@ -9,7 +9,7 @@ const Booking = require("./models/Booking");
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(cors({origin: true,credentials: true}));
 app.use(express.json());
 
 // Test route
